@@ -63,6 +63,9 @@ include_directories(include/DLoopDetector/)
 if(BUILD_DemoBRIEF)
   add_executable(demo_brief demo/demo_brief.cpp)
   target_link_libraries(demo_brief ${OpenCV_LIBS} ${DLib_LIBS} ${DBoW2_LIBS})
+
+  add_executable(demo2_brief demo/demo2_brief.cpp)
+  target_link_libraries(demo2_brief ${OpenCV_LIBS} ${DLib_LIBS} ${DBoW2_LIBS} gflags)
 endif(BUILD_DemoBRIEF)
 
 if(BUILD_DemoSURF)
